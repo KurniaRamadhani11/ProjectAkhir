@@ -98,15 +98,19 @@ class Hero extends Entity{
   calculateLife(){
   }
 
-  saveScore(){
-
+  setsaveScore(score){
+    this.score = score;
   }
-
+ getsaveScore(score){
+   return this.score;
+  }
 }
 
 class Peluru extends Hero{
   constructor(ukuran, x, y, warna, speed){
-    super( x, y );
+    super( x, y ); setsaveScore(score){
+    this.score = score;
+  }
     this.warna=warna;
     this.kecepatan=speed;
     this.ukuran=ukuran;
